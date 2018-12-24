@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+	<link rel=stylesheet type=text/css href="{{url_for('static', filename='styles.css')}}">
+</head>
+<body>
+
+  <header>
+    <ul class="header">
+      <li>
+        <a class="glyphicon glyphicon-home" href = "{{url_for('browseHome')}}"> Home</a>
+      </li>
+
+      <li style="float:right">
+        {%if 'username' not in session %}
+        <a href="{{url_for('Login')}}"> Login </a>
+        {% else %}
+        <a href="{{url_for('gdisconnect')}}">Logout
+        <img src="{{ session['picture']}}" width="30px" height="30px"></a>
+        {% endif %}
+      </li>
+    </ul>
+  </header>
+
+  <p class="message">
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+      {% for message in messages %}
+        {{message}}
+      {% endfor %}
+    {% endif %}
+    {% endwith %}
+  </p>
+
+  <div>
+    {% block content %}
+    {% endblock %}
+  </div>
+
+</body>
+</html>

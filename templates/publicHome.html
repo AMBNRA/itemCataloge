@@ -1,0 +1,30 @@
+{% include "header.html" %}
+{% block content %}
+
+  <div class="middiv">
+
+    <div><img src="{{ url_for('static', filename='head.png') }}" width="100%"><div>
+
+    <div class="left">
+      <p>Coffee Types</p>
+      <ul>
+        {% for i in coffee %}
+        <li><a href = "{{url_for('browseCoffee', coffee_id = i.id)}}">๏ {{i.name}}</a></li>
+        {% endfor %}
+      </ul>
+    </div>
+
+    <div class="line"></div>
+
+    <div class="right">
+      <p>Last items</p>
+      <ul>
+        {% for i in items %}
+        <li><a href = "{{url_for('browseItem',coffee_id=i.coffee_id, items_id=i.id)}}">◌ {{i.name}} ({{i.coffee.name}})</a></li>
+        {% endfor %}
+      </ul>
+    </div>
+
+  </div>
+
+{% endblock %}

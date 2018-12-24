@@ -1,0 +1,20 @@
+{% include "header.html" %}
+{% block content %}
+
+  <div class="middiv">
+
+    <p>Are you sure you want to delete <strong>{{item.name}}</strong> from {{item.coffee.name}}?</p>
+
+    <form action="{{url_for('deleteItem' ,coffee_id=coffee_id, items_id=items_id)}}" method="POST">
+      <br><br>
+      <div class="btn">
+        <button class="glyphicon glyphicon-remove" class="button" type="submit"> Delete</button>
+        <a href = "{{url_for('browseCoffee',coffee_id=coffee_id)}}">
+          <button class="glyphicon glyphicon-chevron-left" class="button" type="button">
+          Cancel</button></a>
+      </div>
+
+    </form>
+  </div>
+
+{% endblock %}

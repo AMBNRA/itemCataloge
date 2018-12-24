@@ -1,0 +1,40 @@
+{% include "header.html" %}
+{% block content %}
+
+  <div class="middiv">
+
+  <p><strong>New Item</strong></p>
+
+  <form action="{{url_for('addItem')}}" method="POST">
+    <p class="paragraghdisc">
+      <label for="name">Name:</label><br>
+      <input type="text" size="52" name="name" maxlength="20" placeholder="name of drink" required></p>
+
+    <p class="paragraghdisc">
+      <label for="description">Description:</label><br>
+      <textarea name="description" rows="3" cols="50" name="description"  maxlength="50" placeholder="description of drink"></textarea></p>
+
+    <p class="paragraghdisc">
+      <label for="name">Price</label><br>
+      <input type="text" size="52" name="price" maxlength="5" placeholder="price in SAR" required></p>
+
+    <p class="paragraghdisc">
+    <label>Type is:</label><br>
+    <select name="coffee_id">
+      <option value=1 >ARNW Coffee</option>
+      <option value=2 >Hot Coffee</option>
+      <option value=3 >Ice Coffee</option>
+      <option value=4 >Fresh Drinks</option>
+    </select><br><br></p>
+
+    <div class="btn">
+    <button class="glyphicon glyphicon-ok-circle" class="button" type="submit"> Create</button>
+    <a href = "{{url_for('browseHome')}}">
+      <button class="glyphicon glyphicon-chevron-left" class="button">
+      Cancel</button></a>
+    </div>
+
+  </form>
+  </div>
+
+{% endblock %}

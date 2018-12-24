@@ -1,0 +1,25 @@
+{% include "header.html" %}
+{% block content %}
+
+  <div class="middiv">
+
+    <p>{{items.name}}</p>
+    <p class="paragraghdisc">{{items.description}}</p>
+    <p class="paragraghdisc">{{items.price}} SAR.</p>
+    <br><br><br>
+
+    <div class="btn">
+    <a href = "{{url_for('editItem', coffee_id=coffee.id, items_id=items.id)}}">
+      <button class="glyphicon glyphicon-plus" class="button">
+      Edit</button></a>
+    <a href = "{{url_for('deleteItem', coffee_id=coffee.id, items_id=items.id)}}">
+      <button class="glyphicon glyphicon-remove" class="button">
+      Delete</button></a>
+    <a href = "{{url_for('browseHome')}}">
+      <button class="glyphicon glyphicon-chevron-left" class="button">
+      Cancel</button></a>
+    </div>
+
+  </div>
+
+{% endblock %}

@@ -1,0 +1,126 @@
+.header {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+	list-style-type: none;
+  background-color: #B29191;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+}
+
+.header li {
+	width: auto;
+  float: left;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+.header li a {
+	color: white;
+	padding: 14px;
+	display: block;
+	text-align: center;
+  text-decoration: none;
+}
+
+.header li a:hover {
+	color: #DEB887;
+}
+
+.middiv{
+	position: absolute;
+  width: 50%;
+	margin:auto;
+  border: 2px solid #B29191;
+	border-radius: 20px;
+  padding:30px;
+	display: inline-block;
+	top: 20%;
+  right: 0;
+  left: 0;
+	height: auto;
+}
+
+.right {
+  float: left;
+  width: 60%;
+  padding: 10px;
+}
+
+.rightItem {
+  float: left;
+  width: 35%;
+  padding: 10px;
+}
+
+.left {
+  float: left;
+  width: 35%;
+  padding: 10px;
+}
+
+.line {
+	float: left;
+  width: auto;
+	border-left: 2px solid #B29191;
+	height: 150px;
+	margin-top: 5%;
+	margin-bottom: 5%;
+  padding-right: 10px;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+	list-style-type: none;
+}
+
+ul li {
+	width: auto;
+  float: left;
+	font-size: 18px;
+}
+
+ul li a {
+	color: #6B1F1F;
+	padding: 14px;
+  text-decoration: none;
+}
+
+ul li a:hover {
+	color: #B29191;
+}
+
+p {
+	color: #6B1F1F;
+	font-size: 24px;
+	margin-top: 10px;
+}
+
+.paragraghdisc
+{
+	color: #6B1F1F;
+	font-size: 18px;
+}
+
+button {
+  background-color: #B29191;
+  border: none;
+  color: white;
+  padding: 10px;
+  font-size: 16px;
+	border-radius: 12px;
+}
+
+.btn{
+	position: absolute;
+	padding: 10px;
+	right:    0;
+	bottom:   0;
+}
+
+.message{
+  color: #B29191;
+  font-size: 14px;
+  text-align: center;
+}

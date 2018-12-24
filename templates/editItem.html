@@ -1,0 +1,39 @@
+{% include "header.html" %}
+{% block content %}
+
+  <div class="middiv">
+
+    <p><strong>Edit Item</strong></p>
+
+    <form action="{{url_for('editItem' ,coffee_id=coffee_id, items_id=items_id, item=editItem)}}" method="POST">
+      <p class="paragraghdisc">
+        <label for="name">Name:</label><br>
+      <input type="text" size="50" maxlength="20" name="name" placeholder = '{{item.name}}'></p>
+
+      <p class="paragraghdisc"><label for="description">Description:</label><br>
+      <input type="text" size="50"  name="description" maxlength="50" placeholder = '{{item.description}}'></p>
+
+      <p class="paragraghdisc"><label for="price">Price</label><br>
+      <input type="text" size="50"  name="price" maxlength="5" placeholder = '{{item.price}}'></p>
+
+      <p class="paragraghdisc">
+      <label>Type is:</label><br>
+      <select name="coffee_id">
+        <option value=1 >ARNW Coffee</option>
+        <option value=2 >Hot Coffee</option>
+        <option value=3 >Ice Coffee</option>
+        <option value=4 >Fresh Drinks</option>
+      </select>
+      <br><br><br></p>
+
+      <div class="btn">
+        <button class="glyphicon glyphicon-ok" class="button" type="submit"> Save</button>
+        <a href = "{{url_for('browseItem',coffee_id=coffee_id, items_id=items_id)}}">
+          <button class="glyphicon glyphicon-chevron-left" class="button">
+          Cancel</button></a>
+      </div>
+
+    </form>
+  </div>
+
+{% endblock %}

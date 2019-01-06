@@ -1,4 +1,4 @@
-# Item Cataloge (Coffee)
+# Item Cataloge (ARNW Coffee)
 ## Project Description
 
 ### Introduction:
